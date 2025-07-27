@@ -396,11 +396,6 @@ body {
 }
 
 /* ===== AKTUALISIERTES GILDENLEITUNG-LAYOUT ===== */
-.leader-grid {
-  display: grid !important;
-  grid-template-columns: repeat(2, 1fr) !important;
-}
-
 .leaders {
     padding: 5rem 2rem;
     max-width: 1000px;
@@ -427,11 +422,11 @@ body {
 }
 
 .leader-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
-    margin-top: 2rem;
+    max-width: 700px;
+    margin: 2rem auto 0;
 }
 
 .leader-card {
@@ -441,11 +436,9 @@ body {
     border-left: 5px solid var(--gold);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     transition: all 0.3s;
+    min-height: 200px;
     position: relative;
     overflow: hidden;
-    width: calc(50% - 1rem); /* 2 Karten pro Reihe */
-    min-height: 200px;
-    max-width: 350px;
 }
 
 .leader-card::before {
@@ -481,12 +474,11 @@ body {
 }
 
 /* Mobile Ansicht */
-@media (max-width: 768px) {
-    .leader-card {
-        width: 100%;
+@media (max-width: 600px) {
+    .leader-grid {
+        grid-template-columns: 1fr;
     }
 }
-
 /* ===== KONTAKTFORMULAR ===== */
 .contact {
     padding: 5rem 2rem;
