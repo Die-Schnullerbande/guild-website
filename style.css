@@ -438,22 +438,15 @@ body {
     transition: all 0.3s;
     position: relative;
     overflow: hidden;
-    width: 350px; /* Feste Breite für alle Karten */
-    min-height: 200px; /* Feste Höhe für alle Karten */
-}
-
-/* Erste zwei Karten nebeneinander */
-.leader-card:nth-child(1),
-.leader-card:nth-child(2) {
-    flex: 0 0 calc(50% - 1rem); /* 50% minus gap */
+    width: calc(50% - 1rem); /* 2 Karten pro Reihe */
+    min-height: 200px;
     max-width: 350px;
 }
 
-/* Dritte Karte zentriert unterhalb */
-.leader-card:nth-child(3) {
-    flex: 0 0 100%;
+.leader-card:nth-child(3),
+.leader-card:nth-child(4) {
+    width: calc(50% - 1rem); /* Auch 3. und 4. Karte nebeneinander */
     max-width: 350px;
-    margin: 0 auto;
 }
 
 .leader-card::before {
@@ -493,8 +486,9 @@ body {
     .leader-card,
     .leader-card:nth-child(1),
     .leader-card:nth-child(2),
-    .leader-card:nth-child(3) {
-        flex: 0 0 100%;
+    .leader-card:nth-child(3),
+    .leader-card:nth-child(4) {
+        width: 100%;
         max-width: 100%;
     }
 }
