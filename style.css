@@ -63,13 +63,6 @@ body {
     margin: 0 auto;
 }
 
-/* Philipp allein zentrieren */
-.leader-card:nth-child(3) {
-    grid-column: 1 / -1;
-    width: 50%;
-    margin: 0 auto;
-}
-
 .logo {
     font-size: 2rem;
     font-weight: 900;
