@@ -396,6 +396,11 @@ body {
 }
 
 /* ===== AKTUALISIERTES GILDENLEITUNG-LAYOUT ===== */
+.leader-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+}
+
 .leaders {
     padding: 5rem 2rem;
     max-width: 1000px;
